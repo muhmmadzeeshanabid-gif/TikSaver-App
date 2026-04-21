@@ -4,8 +4,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>TikSaver - Download TikTok Videos Without Watermark</title>
-        <meta name="description" content="TikSaver is the best free online tool to download TikTok videos without watermarks in HD quality. Save videos as MP4 or MP3 instantly." />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
         <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" />
       </Head>
       <body className="antialiased">
