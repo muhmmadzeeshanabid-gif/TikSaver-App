@@ -69,6 +69,8 @@ export default function Home() {
     isExample: true
   };
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     const savedUrl = localStorage.getItem("tiksaver_last_url");
     const savedResult = localStorage.getItem("tiksaver_last_result");
@@ -78,17 +80,21 @@ export default function Home() {
     } else {
       setResult(exampleData);
     }
+    setIsLoaded(true);
   }, []);
 
   useEffect(() => {
+    if (!isLoaded) return;
+    
     localStorage.setItem("tiksaver_last_url", url);
-    if (!url) {
+    if (url === "") {
       setResult(exampleData);
       localStorage.removeItem("tiksaver_last_result");
+      localStorage.removeItem("tiksaver_last_url");
     } else if (result && !result.isExample) {
       localStorage.setItem("tiksaver_last_result", JSON.stringify(result));
     }
-  }, [url, result]);
+  }, [url, result, isLoaded]);
 
   const handleClear = () => {
     setUrl("");
