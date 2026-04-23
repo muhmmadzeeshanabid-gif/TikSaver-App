@@ -43,7 +43,7 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  const testLink = "https://www.tiktok.com/@fazii_khanzada/video/7464049811520621829";
+  const testLink = "https://www.tiktok.com/@fazii_khanzada/video/7584488019181210901?is_from_webapp=1&sender_device=pc";
 
   const copyTestLink = () => {
     navigator.clipboard.writeText(testLink);
@@ -82,7 +82,10 @@ export default function Home() {
 
   useEffect(() => {
     localStorage.setItem("tiksaver_last_url", url);
-    if (result && !result.isExample) {
+    if (!url) {
+      setResult(exampleData);
+      localStorage.removeItem("tiksaver_last_result");
+    } else if (result && !result.isExample) {
       localStorage.setItem("tiksaver_last_result", JSON.stringify(result));
     }
   }, [url, result]);
@@ -222,7 +225,6 @@ export default function Home() {
                 type="submit" 
                 disabled={isLoading} 
                 className="btn-cut min-w-[160px] h-[60px]"
-                style={{ backgroundColor: 'var(--primary)' }}
               >
                 {isLoading ? <Loader2 className="animate-spin w-5 h-5" /> : <><Download className="w-5 h-5" /><span>Get Video</span></>}
               </button>
@@ -325,8 +327,7 @@ export default function Home() {
             </div>
             <button 
               onClick={copyTestLink}
-              className="btn-cut w-full !py-3 !text-[9px] font-black tracking-widest transition-all duration-300"
-              style={{ backgroundColor: copied ? '#10b981' : 'var(--primary)' }}
+              className={`btn-cut w-full !py-3 !text-[9px] font-black tracking-widest transition-all duration-300 ${copied ? 'bg-emerald-500' : ''}`}
             >
               {copied ? <CheckCircle className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
               <span>{copied ? "COPIED" : "COPY TEST LINK"}</span>

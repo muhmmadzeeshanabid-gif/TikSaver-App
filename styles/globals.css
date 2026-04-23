@@ -66,6 +66,7 @@ body {
 
 .cut-card:not(.static-card):hover {
   border-color: var(--primary);
+  filter: drop-shadow(0 0 1px var(--primary));
   box-shadow: 0 20px 40px -10px var(--primary-light);
 }
 
@@ -178,6 +179,7 @@ body {
   background: var(--bg);
   border-color: var(--primary) !important;
   border-width: 2px;
+  filter: drop-shadow(0 0 1px var(--primary));
   box-shadow: 0 15px 30px -5px var(--primary-light);
 }
 
