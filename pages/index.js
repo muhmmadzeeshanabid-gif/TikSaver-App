@@ -81,7 +81,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (url) localStorage.setItem("tiksaver_last_url", url);
+    localStorage.setItem("tiksaver_last_url", url);
     if (result && !result.isExample) {
       localStorage.setItem("tiksaver_last_result", JSON.stringify(result));
     }
