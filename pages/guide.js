@@ -69,22 +69,22 @@ export default function Guide() {
           {/* STEP 3 */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center animate-fade-up">
             <div className="w-full lg:flex-1 group">
-              <div className="relative overflow-hidden cut-card p-1 transition-all duration-400 h-[200px] md:h-[300px] border-2 flex items-center justify-center" style={{ backgroundColor: '#ecfdf5', borderColor: '#10b981' }}>
-                <div className="w-16 h-16 md:w-24 md:h-24 shadow-xl flex items-center justify-center text-emerald-500 transition-transform duration-500" style={{ backgroundColor: 'var(--card)', clipPath: "polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)" }}>
+              <div className="relative overflow-hidden cut-card p-1 transition-all duration-400 h-[200px] md:h-[300px] border-2 flex items-center justify-center" style={{ backgroundColor: 'var(--primary-light)', borderColor: 'var(--primary)', opacity: 0.8 }}>
+                <div className="w-16 h-16 md:w-24 md:h-24 shadow-xl flex items-center justify-center transition-transform duration-500" style={{ backgroundColor: 'var(--card)', color: 'var(--primary)', clipPath: "polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)" }}>
                   <CheckCircle className="w-8 h-8 md:w-12 md:h-12" />
                 </div>
               </div>
             </div>
             <div className="lg:flex-1 text-left">
-              <div className="w-12 h-12 bg-emerald-500 text-white flex items-center justify-center font-bold text-xl mb-6 shadow-xl shadow-emerald-500/20" style={{ clipPath: "polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)" }}>
+              <div className="w-12 h-12 text-white flex items-center justify-center font-bold text-xl mb-6 shadow-xl shadow-emerald-500/20" style={{ backgroundColor: 'var(--primary)', clipPath: "polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)" }}>
                 3
               </div>
               <h3 className="text-2xl md:text-3xl font-black mb-4 flex items-center gap-3" style={{ color: 'var(--text)' }}>
-                <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-emerald-500" />
-                Download & Enjoy
+                <CheckCircle className="w-5 h-5 md:w-6 md:h-6" style={{ color: 'var(--primary)' }} />
+                Save and Enjoy
               </h3>
               <p className="text-base md:text-lg leading-relaxed" style={{ color: 'var(--text-dim)' }}>
-                After a few moments, the video details will appear. You can choose to download the <span className="font-bold" style={{ color: 'var(--primary)' }}>HD version</span> without any watermark, keep the labels, or even save just the <span className="font-bold" style={{ color: 'var(--primary)' }}>MP3 Audio</span>. Your file will be saved directly to your device for offline viewing.
+                After processing, the download will begin automatically. You can find your high-quality, watermark-free video in your device's <span className="font-bold" style={{ color: 'var(--primary)' }}>Downloads</span> folder or your <span className="font-bold" style={{ color: 'var(--primary)' }}>Gallery/Photos</span> app. Enjoy your content anywhere!
               </p>
             </div>
           </div>

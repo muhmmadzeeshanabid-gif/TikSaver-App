@@ -348,9 +348,15 @@ export default function Home() {
             <div className="w-24 h-24 mx-auto flex items-center justify-center shadow-xl shadow-emerald-500/10" style={{ backgroundColor: 'var(--primary-light)', color: 'var(--primary)', clipPath: "polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)" }}>
               <CheckCircle className="w-12 h-12" />
             </div>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <h3 className="text-3xl font-black tracking-tighter uppercase">Success!</h3>
-              <p className="font-medium leading-relaxed" style={{ color: 'var(--text-dim)' }}>Your video has been saved to your device. Ready for the next one?</p>
+              <p className="font-medium leading-relaxed" style={{ color: 'var(--text-dim)' }}>Your video has been saved to your device.</p>
+              <div className="p-4 bg-emerald-500/5 border border-emerald-500/10 rounded-xl space-y-1">
+                <p className="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Mobile Tip</p>
+                <p className="text-[10px] leading-relaxed italic opacity-70">
+                  Check your phone's <span className="font-bold">Downloads</span> or <span className="font-bold">Gallery</span> app. Your video is already there!
+                </p>
+              </div>
             </div>
             <div className="space-y-4">
               <button
